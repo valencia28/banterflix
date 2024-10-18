@@ -1,0 +1,27 @@
+body {
+  background-color: black;
+  color: white;
+}
+
+.navbar-area {
+  padding: 25px;
+  background-color: black;
+}
+
+.navbar-btn {
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.navbar-btn:hover {
+  cursor: pointer;
+}
+
+.search-box {
+  background-color: #212529;
+  padding: 6px 12px;
+}
+
+.search-box::placeholder {
+  color: rgb(209, 209, 209);
+}

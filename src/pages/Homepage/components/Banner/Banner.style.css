@@ -1,0 +1,121 @@
+.banner {
+  height: 90vh;
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.banner:before {
+  content: " ";
+  background: linear-gradient(
+    to top,
+    black,
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0)
+  );
+  position: absolute;
+  left: 0;
+  height: 90vh;
+  width: 100%;
+}
+
+/*해당 클래스 안에 있는 모든 요소를 가져올 때 사용하는 코드*/
+.banner-text-area > * {
+  z-index: 2;
+}
+
+.banner-text-area {
+  width: 36%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 2rem;
+}
+
+.banner-title {
+  color: #e50914;
+  font-size: 8rem;
+  font-weight: 700;
+}
+
+.banner-title-cursor {
+  font-size: 6rem;
+  position: relative;
+  top: -16px;
+  /*깜박임 효과*/
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1; /* 시작: 커서 보이기 */
+  }
+  50% {
+    opacity: 0; /* 중간: 커서 숨기기 */
+  }
+  100% {
+    opacity: 1; /* 끝: 다시 커서 보이기 */
+  }
+}
+
+.banner-text-area p {
+  font-size: 2rem;
+}
+
+/*모바일 세로*/
+@media (max-width: 480px) {
+  .banner {
+    height: 43vh;
+    background-size: 100% 100%;
+    position: relative;
+  }
+
+  .banner:before {
+    background: linear-gradient(to top, black, transparent);
+    height: 43vh;
+  }
+
+  .banner-text-area {
+    position: absolute;
+  }
+
+  .banner-title {
+    font-size: 3.5rem;
+    margin-left: 90px;
+    padding-left: 170px;
+  }
+
+  .banner-title-cursor {
+    font-size: 2.5rem;
+    top: -9px;
+  }
+
+  .banner-text-area p {
+    display: none;
+  }
+}
+
+/*태블릿 세로*/
+@media (min-width: 768px) and (max-width: 1024px) {
+  .banner-text-area p {
+    display: none;
+  }
+}
+
+/*태블릿 가로모드*/
+@media (min-width: 1024px) and (max-width: 1400px) {
+  .banner-title {
+    font-size: 5.5rem;
+  }
+
+  .banner-title-cursor {
+    font-size: 4rem;
+    top: -12px;
+  }
+
+  .banner-text-area p {
+    display: none;
+  }
+}

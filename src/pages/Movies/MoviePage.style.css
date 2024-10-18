@@ -1,0 +1,51 @@
+.movie-page-title {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 20px;
+  margin-left: 40px;
+  gap: 10px;
+}
+
+.movie-page-title h4 {
+  margin-top: 6px;
+  font-style: italic;
+  font-weight: 400;
+}
+
+/*장르별 영화 부분*/
+.movies-by-genre-area {
+  margin-top: 70px;
+}
+
+.movies-by-genre {
+  margin-top: 18px;
+}
+
+/*모바일 세로*/
+@media (max-width: 480px) {
+  .movie-page-title {
+    margin-left: 25px;
+    margin-bottom: -35px;
+  }
+
+  .movies-by-genre-area {
+    margin-top: -50px;
+  }
+}
+
+/*태블릿 세로*/
+@media (min-width: 768px) and (max-width: 1024px) {
+  .movie-page-title {
+    margin-left: 25px;
+    margin-bottom: -90px;
+    position: relative;
+    z-index: 500;
+  }
+  .movies-by-genre-area {
+    margin-top: -50px;
+  }
+}
+
+/*태블릿 가로*/
+@media (min-width: 1024px) and (max-width: 1400px) {
+}

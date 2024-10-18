@@ -1,0 +1,108 @@
+.big-movie-card {
+  width: 100%;
+  height: 65vh;
+  background-size: cover;
+  cursor: pointer;
+  transition: 0.5s;
+  border-radius: 5px;
+  background-position: center;
+}
+
+/*각 카드에 마우스 올렸을 때 적용되는 css*/
+.big-movie-over-lay {
+  width: 100%;
+  height: 100%;
+  background: rgba(43, 41, 41, 0.9);
+  opacity: 0; /*투명도 = 0 -> 아예 투명하게 해서 안 보이게 함*/
+  transition: all 1s;
+  color: white;
+  font-weight: bold;
+  overflow-wrap: break-word;
+  padding: 80px 30px 10px 30px;
+  border-radius: 5px;
+}
+
+.big-movie-over-lay:hover {
+  opacity: 1;
+  border-radius: 5px;
+}
+
+.big-movie-card:hover {
+  transform: scale(1.1) translateZ(20px);
+  z-index: 2;
+  border-radius: 5px;
+}
+
+/*호버됐을 때 카드 css*/
+.big-movie-release-date-age-info {
+  display: flex;
+  justify-content: flex-start;
+  gap: 7px;
+  font-weight: 350;
+}
+
+.big-movie-rating {
+  display: flex;
+  justify-content: flex-start;
+  gap: 7px;
+  margin-top: 5px;
+  font-weight: 600;
+}
+
+.big-movie-overview {
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 350;
+  margin-top: 20px;
+}
+
+.big-movie-genre {
+  margin-top: 60px;
+  margin-right: 5px;
+  font-size: 15px;
+}
+
+/*모바일 세로*/
+@media (max-width: 480px) {
+  .big-movie-card {
+    width: 100%;
+    height: 70%;
+    background-size: 100% 100%;
+  }
+
+  .big-movie-over-lay {
+    width: 100%;
+    height: 70%;
+  }
+}
+
+/*태블릿 세로*/
+@media (min-width: 768px) and (max-width: 1024px) {
+  .big-movie-card {
+    width: 100%;
+    height: 90%;
+    background-size: 100% 100%;
+  }
+
+  .big-movie-over-lay {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/*태블릿 가로*/
+@media (min-width: 1024px) and (max-width: 1400px) {
+  .big-movie-card {
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+  }
+
+  .big-movie-over-lay {
+    width: 100%;
+    height: 100%;
+  }
+}

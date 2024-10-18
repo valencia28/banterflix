@@ -1,0 +1,74 @@
+.banner {
+  height: 90vh;
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.banner:before {
+  content: " ";
+  background: linear-gradient(to top, black, transparent);
+  position: absolute;
+  left: 0;
+  height: 90vh;
+  width: 100%;
+}
+
+.banner-text-area {
+  width: 36%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  padding: 2rem;
+}
+
+/*해당 클래스 안에 있는 모든 요소를 가져올 때 사용하는 코드*/
+.banner-text-area > * {
+  z-index: 2;
+}
+
+.movie-rating-age {
+  display: none;
+}
+
+/*모바일 세로*/
+@media (max-width: 480px) {
+  .banner {
+    height: 43vh;
+    background-size: 100% 100%;
+    position: relative;
+  }
+
+  .banner:before {
+    content: " ";
+    background: linear-gradient(to top, black, transparent);
+    position: absolute;
+    left: 0;
+    height: 43vh;
+    width: 100%;
+  }
+
+  .banner-text-area {
+    position: absolute;
+  }
+
+  .banner-text-area p {
+    display: none;
+  }
+
+  .banner-text-area h1 {
+    width: 300px;
+    margin-top: 180px;
+  }
+
+  .movie-rating-age {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    align-items: center;
+    position: absolute;
+    top: 290px;
+    left: 31px;
+  }
+}

@@ -1,0 +1,33 @@
+.footer-area {
+  height: 250px;
+  background-color: #232222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 18px;
+  margin-top: 150px;
+}
+
+.footer-area img {
+  width: 15rem;
+}
+
+/*모바일 세로*/
+@media (max-width: 480px) {
+  .footer-main-content {
+    text-align: center;
+    padding-top: 10px;
+  }
+}
+
+/*태블릿 세로*/
+@media (min-width: 768px) and (max-width: 1024px) {
+  .footer-main-content {
+    text-align: center;
+    padding-top: 10px;
+    padding-right: 100px;
+    padding-left: 100px;
+  }
+}

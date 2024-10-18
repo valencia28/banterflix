@@ -1,0 +1,169 @@
+.movie-detail-background {
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+}
+
+.movie-detail-background:before {
+  content: " ";
+  background: linear-gradient(to top, black, transparent);
+  position: absolute;
+  left: 0;
+  height: 55%;
+  width: 100%;
+}
+
+.detail-overlay {
+  height: 95%;
+  width: 100%;
+  background: black;
+  position: absolute;
+  opacity: 0.6;
+  z-index: 1;
+}
+
+.detail-text-area > * {
+  z-index: 100;
+  opacity: 1;
+  position: relative;
+}
+
+/*상단 포스터 및 내용 부분*/
+.for-top-margin {
+  width: 100%;
+  height: 50px;
+}
+
+.detail-poster {
+  width: 500px;
+  height: 750px;
+  border-radius: 7px;
+}
+
+.movie-detail-title {
+  margin-top: 70px;
+  font-size: 60px;
+}
+
+.movie-detail-release-date-age-info {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  font-weight: 350;
+  font-size: 30px;
+}
+
+.movie-detail-rating {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-top: 5px;
+  font-weight: 600;
+  font-size: 30px;
+}
+
+.movie-detail-overview {
+  font-weight: 350;
+  margin-top: 10px;
+  font-size: 27px;
+}
+
+.movie-detail-genre {
+  margin-top: 40px;
+  margin-right: 5px;
+  font-size: 20px;
+}
+
+/*예고편 영상 부분*/
+.position-class {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.trailer-area {
+  margin-top: 100px;
+}
+
+.trailer-title {
+  margin-bottom: 0px;
+  font-size: 45px;
+  text-align: center;
+}
+
+/*유튜브 영상 반응형*/
+.player {
+  padding-top: 56.25%;
+  position: relative;
+}
+
+.iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/*관련 추천 영화 부분*/
+.similar-movies-area {
+  margin-top: 150px;
+  /* background-color: #232222; */
+  box-shadow: 0px -15px 25px rgba(255, 255, 255, 0.2),
+    0px 20px 25px rgba(255, 255, 255, 0.2);
+}
+
+/*모바일 세로*/
+@media (max-width: 480px) {
+  .for-top-margin {
+    display: none;
+  }
+
+  .detail-poster {
+    width: 92vw;
+    height: 60vh;
+  }
+
+  .movie-detail-title {
+    font-size: 35px;
+    margin-top: 20px;
+    text-align: left;
+  }
+
+  .movie-detail-release-date-age-info {
+    font-size: 25px;
+  }
+
+  .movie-detail-rating {
+    font-size: 27px;
+  }
+
+  .movie-detail-overview {
+    font-size: 24px;
+  }
+
+  .movie-detail-genre {
+    font-size: 18px;
+  }
+
+  .trailer-title {
+    font-size: 33px !important;
+    /* margin-left: 0px !important; */
+  }
+}
+
+/*태블릿 세로*/
+@media (min-width: 768px) and (max-width: 1024px) {
+  .detail-poster {
+    margin-left: 100px;
+  }
+}
+
+/*태블릿 가로*/
+@media (min-width: 1024px) and (max-width: 1400px) {
+  .trailer-title {
+    margin-left: 0px !important;
+  }
+}
