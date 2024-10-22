@@ -12,18 +12,13 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import Footer from "./components/Footer/Footer";
 
-//Outlet: 리액트 router 안에 있는 자손들을 가져올 수 있도록 도와줌
-
 const AppLayout = () => {
-  //홈페이지에서 검색기능 관련
   const [keyword, setKeyword] = useState("");
   const navigate = useNavigate();
 
   const searchByKeyword = (event) => {
     event.preventDefault();
-    //검색을 누르면 url을 바꿔줘야 함
     navigate(`/search?q=${keyword}`);
-    //검색창 내용 자동 비우기
     setKeyword("");
   };
 

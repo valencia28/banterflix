@@ -6,12 +6,9 @@ import { Container } from "react-bootstrap";
 import Typewriter from "typewriter-effect";
 
 const Banner = () => {
-  //usePopularMoviesQuery는 useQuery로 쓰였기 때문에 {data} 등을 반환함
   const { data, isLoading, isError, error } = usePopularMoviesQuery();
   console.log("data: ", data);
 
-  //로딩 스피너 추후에 넣기 - 부트스트랩 등
-  //if 구문에 return을 쓰지 않으면 아래쪽 url부분에 ${data?.results[0].poster_pat}로 적어야 함
   if (isLoading) {
     return <h1>Loading...</h1>;
   }
@@ -19,7 +16,6 @@ const Banner = () => {
     return <Alert variant="danger">{error.message}</Alert>;
   }
 
-  //Banner라는 글자를 써야지만 이미지가 backgroundImage로써 보여짐!
   return (
     <div
       style={{

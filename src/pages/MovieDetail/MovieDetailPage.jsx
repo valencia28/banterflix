@@ -34,9 +34,6 @@ const MovieDetailPage = () => {
     error: similarError,
   } = useSimilarMoviesQuery({ movieId: id });
 
-  console.log("similar: ", similarData);
-
-  //받은 데이터 중 key 값을 Youtube 비디오로 전달
   const latestTeaser =
     videoData
       ?.filter((video) => video.type.toLowerCase() === "trailer")

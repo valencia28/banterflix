@@ -10,7 +10,6 @@ const api = axios.create({
   },
 });
 
-//아래 내용은 axios 인터셉트 내용으로 디버깅할 때 유용함
 // 요청 인터셉터 추가하기
 axios.interceptors.request.use(
   function (config) {

@@ -9,7 +9,6 @@ import ScrollAnimation from "react-animate-on-scroll";
 const UpcomingMovieSlide = () => {
   const { data, isLoading, isError, error } = useUpcomingMoviesQuery();
 
-  console.log("ff: ", data);
   if (isLoading) {
     return <h1>Loading...</h1>;
   }

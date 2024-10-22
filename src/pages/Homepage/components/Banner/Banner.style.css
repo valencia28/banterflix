@@ -19,7 +19,6 @@
   width: 100%;
 }
 
-/*해당 클래스 안에 있는 모든 요소를 가져올 때 사용하는 코드*/
 .banner-text-area > * {
   z-index: 2;
 }
@@ -44,19 +43,18 @@
   font-size: 6rem;
   position: relative;
   top: -16px;
-  /*깜박임 효과*/
   animation: blink 1s step-end infinite;
 }
 
 @keyframes blink {
   0% {
-    opacity: 1; /* 시작: 커서 보이기 */
+    opacity: 1;
   }
   50% {
-    opacity: 0; /* 중간: 커서 숨기기 */
+    opacity: 0;
   }
   100% {
-    opacity: 1; /* 끝: 다시 커서 보이기 */
+    opacity: 1;
   }
 }
 

@@ -5,7 +5,6 @@ const fetchMovieDetail = (movieId) => {
   return api
     .get(`movie/${movieId}`)
     .then((response) => {
-      //console.log("API Response:", response);
       return response;
     })
     .catch((error) => {

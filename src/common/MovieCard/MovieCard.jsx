@@ -7,9 +7,7 @@ import { useMovieGenreQuery } from "../../hooks/useMovieGenre";
 import { useNavigate } from "react-router-dom";
 
 const MovieCard = ({ movie }) => {
-  // 데이터 가져올 때 이름 재정의 하는 방법
   const { data: genreData } = useMovieGenreQuery();
-
   const navigate = useNavigate();
 
   //장르 아이디와 이름 매핑하는 함수
@@ -95,7 +93,6 @@ const MovieCard = ({ movie }) => {
           <div>{movie?.vote_average?.toFixed(1)}</div>
         </div>
 
-        {/* map으로 하면 반환은 배열 */}
         <div className="overview">{movie.overview}</div>
         {showGenre(movie.genre_ids).map((id) => (
           <Badge bg="danger" className="genre">

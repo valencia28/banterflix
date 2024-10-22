@@ -1,4 +1,3 @@
-/*각 카드에 마우스 올려서 콘텐츠가 보일 때 카드 안에 내용이 모두 보여지도록 설정*/
 .big-carousel-container {
   overflow: hidden;
   height: 65vh;
@@ -14,15 +13,6 @@ movie-slider {
 movie-slider:not(.react-multi-carousel-item--active) {
   opacity: 0.5;
 }
-
-/*강의에서 나온 코드지만 사용하지 않아 코멘트*/
-/* @media (max-width: 400px) {
-  .carousel-container {
-    height: 330px;
-    display: flex;
-    justify-content: space-between;
-  }
-} */
 
 /*모바일 세로*/
 @media (max-width: 480px) {

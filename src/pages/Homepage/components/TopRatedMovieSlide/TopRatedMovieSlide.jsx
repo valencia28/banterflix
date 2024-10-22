@@ -8,7 +8,6 @@ import ScrollAnimation from "react-animate-on-scroll";
 
 const TopRatedMovieSlide = () => {
   const { data, isLoading, isError, error } = useTopRatedMovieQuery();
-  //   console.log("toprated: ", data);
 
   if (isLoading) {
     return <h1>Loading...</h1>;

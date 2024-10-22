@@ -8,7 +8,6 @@ import ScrollAnimation from "react-animate-on-scroll";
 
 const PopularMovieSlide = () => {
   const { data, isLoading, isError, error } = usePopularMoviesQuery();
-  console.log("popular: ", data);
 
   if (isLoading) {
     return <h1>Loading...</h1>;
