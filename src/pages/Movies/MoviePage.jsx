@@ -10,6 +10,7 @@ import DropdownButton from "react-bootstrap/DropdownButton";
 import { useInView } from "react-intersection-observer";
 import NowPlayingMoviesSlide from "./components/NowPlayingMoviesSlide/NowPlayingMoviesSlide";
 import { useSortMoviesQuery } from "../../hooks/useSortMovies";
+import MoonLoader from "react-spinners/ClipLoader";
 
 // 정렬 기준에 따른 타이틀 표시
 const sortByDisplayName = {
@@ -26,8 +27,6 @@ const MoviePage = () => {
 
   const { data, isLoading, isError, error, fetchNextPage, isFetchingNextPage } =
     useSortMoviesQuery({ sortBy: selectedSortBy });
-
-  console.log("sortdate: ", data);
 
   const {
     data: movieGenreData,
@@ -62,6 +61,13 @@ const MoviePage = () => {
       )
     : data?.pages;
 
+  /*Loading spinner style*/
+  const override: CSSProperties = {
+    display: "block",
+    margin: "30vh auto",
+    borderColor: "red",
+  };
+
   useEffect(() => {
     if (inView) {
       fetchNextPage();
@@ -69,15 +75,15 @@ const MoviePage = () => {
   }, [inView]);
 
   if (isLoading || genreLoading) {
-    return <h1>Loading...</h1>;
-    // <div>
-    //   <Spinner
-    //     animation="border"
-    //     variant="danger"
-    //     style={{ width: "5rem", height: "5rem" }}
-    //   />
-    //   Loading...
-    // </div>
+    return (
+      <MoonLoader
+        loading={true}
+        cssOverride={override}
+        size={150}
+        aria-label="Loading Spinner"
+        data-testid="loader"
+      />
+    );
   }
   if (isError || genreIsError) {
     return (

@@ -6,21 +6,13 @@ import { responsive } from "../../../../constants/responsive";
 import "animate.css/animate.compat.css";
 import ScrollAnimation from "react-animate-on-scroll";
 
-const PopularMovieSlide = () => {
-  const { data, isLoading, isError, error } = usePopularMoviesQuery();
-
-  if (isLoading) {
-    return <h1>Loading...</h1>;
-  }
-  if (isError) {
-    return <Alert variant="danger">{error.message}</Alert>;
-  }
+const PopularMovieSlide = ({ popularMovies }) => {
   return (
     <div style={{ marginTop: "30px" }}>
       <ScrollAnimation animateIn="fadeInUp" duration="2">
         <MovieSlider
           title="Popular Films"
-          movies={data.results}
+          movies={popularMovies}
           responsive={responsive}
           deviceType="mobile"
         />

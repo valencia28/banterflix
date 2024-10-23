@@ -6,16 +6,7 @@ import { responsive } from "../../../../constants/responsive";
 import "animate.css/animate.compat.css";
 import ScrollAnimation from "react-animate-on-scroll";
 
-const UpcomingMovieSlide = () => {
-  const { data, isLoading, isError, error } = useUpcomingMoviesQuery();
-
-  if (isLoading) {
-    return <h1>Loading...</h1>;
-  }
-  if (isError) {
-    return <Alert variant="danger">{error.message}</Alert>;
-  }
-
+const UpcomingMovieSlide = ({ upcomingMovies }) => {
   return (
     <div
       style={{
@@ -27,7 +18,7 @@ const UpcomingMovieSlide = () => {
       <ScrollAnimation animateIn="fadeInUp" duration="2" delay="500">
         <MovieSlider
           title="Upcoming Films"
-          movies={data.results}
+          movies={upcomingMovies}
           responsive={responsive}
           deviceType="mobile"
         />
