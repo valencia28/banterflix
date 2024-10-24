@@ -1,4 +1,4 @@
-# Weather Forecast
+# Banterflix
 ![image](https://github.com/user-attachments/assets/fd09dfee-2b8a-4976-9310-40b288b35330)
 
 * Demo: https://banterflix.netlify.app/
