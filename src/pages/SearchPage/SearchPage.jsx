@@ -49,8 +49,8 @@ const SearchPage = () => {
 
   return (
     <div>
-      <h4>Go back</h4>
-      <h2>Search Results</h2>
+      {/* <h4>Go back</h4> */}
+      <h2 style={{ marginLeft: "50px" }}>Search Results</h2>
       <Container>
         <div></div>
         <Row>
